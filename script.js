@@ -120,6 +120,7 @@ let displayBooks = () => {
 let updateBooksDisplay = () => {
   resetBooksContainer();
   displayBooks();
+  setLocalStorage();
 };
 
 /* Inserting New Book from the form */
@@ -150,4 +151,21 @@ let submitBook = (e) => {
 
 newBookForm.onsubmit = submitBook;
 
-window.onload = updateBooksDisplay();
+let bookFromJson = (book) => {
+  return new Book(book.title, book.author, book.pages, book.isRead);
+};
+
+let setLocalStorage = () => {
+  localStorage.setItem("booksDB", JSON.stringify(books));
+};
+
+let getLocalStorage = () => {
+  if (localStorage.getItem("booksDB") == null) {
+    books = [];
+  } else {
+    let booksStorage = JSON.parse(localStorage.getItem("booksDB"));
+    books = booksStorage.map((book) => bookFromJson(book));
+  }
+};
+
+window.onload = [getLocalStorage(), updateBooksDisplay()];
