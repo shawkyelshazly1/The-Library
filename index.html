@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9df08aa78f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="big_container">
+      <nav>
+        <h2 class="logo">The Library</h2>
+      </nav>
+      <div class="form_container hidden">
+        <div class="form">
+          <div class="button_div">
+            <button class="close_modal"><i class="fas fa-times"></i></button>
+          </div>
+          <form class="fields">
+            <label for="title">Book Title</label>
+            <input
+              class="input_title"
+              type="text"
+              name="title"
+              id="title"
+              required
+            />
+            <label for="author">Book Author</label>
+            <input
+              class="input_author"
+              type="text"
+              name="author"
+              id="author"
+              required
+            />
+            <label for="pages">Book Pages</label>
+            <input
+              class="input_pages"
+              type="number"
+              name="pages"
+              id="pages"
+              required
+            />
+            <div class="readinput">
+              <label for="isRead">Did You Read It?</label>
+              <input
+                class="input_isRead"
+                type="checkbox"
+                name="isRead"
+                id="isRead"
+              />
+            </div>
+            <button type="submit" class="submit_Form">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container"></div>
+      </div>
+      <button class="add"><span>+</span></button>
+      <div class="footer">
+        <p>Copyright &copy; 2021 Shawky Elshazly</p>
+        <a href="https://github.com/shawkyelshazly1" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
