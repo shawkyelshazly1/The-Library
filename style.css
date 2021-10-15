@@ -21,6 +21,14 @@ nav {
   padding-left: 4rem;
 }
 
+nav a,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
 .main {
   display: flex;
 }
